@@ -6,7 +6,6 @@ import ListView from "../List/ListView";
 
 
 const Store = () => {
-  const [productsData, setProductsData] = useState(products);
   const [currentView, setCurrentView] = useState({
     menuIcon: 'view_list',
     storeView: 'list'
@@ -27,9 +26,9 @@ const Store = () => {
           onSwithhandler={(e) => onSwithhandler(e)}
         />
         {currentView.storeView === "list" ? (
-          <ListView products={productsData} />
+          <ListView products={products} />
         ) : (
-          <CardsView products={productsData} />
+          <CardsView products={products} />
         )}
       </div>
   );
